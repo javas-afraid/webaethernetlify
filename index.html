@@ -3,24 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom MC Launcher</title>
+    <title>Custom Launcher Documentation</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-900 text-white font-sans antialiased">
+<body class="text-gray-200 antialiased py-12 px-4">
 
-    <section class="flex flex-col items-center justify-center min-h-screen text-center px-4">
-        <h1 class="text-5xl font-extrabold tracking-tight sm:text-6xl bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
-            The Ultimate Custom MC Launcher
-        </h1>
-        <p class="mt-6 text-lg leading-8 text-gray-300 max-w-2xl">
-            A lightweight, high-performance, open-source Minecraft Java Edition launcher built natively from scratch. Zero bloat. Full control.
-        </p>
-        <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a id="download-btn" href="#" class="rounded-md bg-green-500 px-6 py-3 text-lg font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500 transition-all">
-                Fetching Latest Release...
+    <main class="max-w-3xl mx-auto bg-black/60 border border-gray-800 p-8 rounded-lg backdrop-blur-md shadow-2xl">
+        
+        <h1 class="text-3xl sm:text-4xl text-green-400 mb-2">INSTALLATION DOCS</h1>
+        <p class="text-sm text-gray-400 mb-8 font-semibold">Last Updated: June 2026</p>
+
+        <section class="space-y-6">
+            <div>
+                <h2 class="text-xl text-amber-400 mb-3">System Requirements</h2>
+                <p>Before launching Minecraft Java Edition, ensure your operating system has a valid Java Runtime Environment (JRE) mapped to your path variable. Our custom launcher supports both OpenJDK 17 and OpenJDK 21 architectures seamlessly.</p>
+            </div>
+
+            <hr class="border-gray-800">
+
+            <div>
+                <h2 class="text-xl text-amber-400 mb-3">How to Authenticate</h2>
+                <p>The launcher utilizes secure Microsoft OAuth 2.0 protocols. When launching for the first time, a secure local window will prompt you to log into your Xbox Live profile. The launcher <strong>never</strong> stores your plain text password; instead, it saves an encrypted refresh token locally inside your Windows app data profile directory.</p>
+                
+                <ul class="list-disc list-inside mt-3 space-y-2 text-gray-300 pl-2">
+                    <li>Multi-factor authentication (MFA) is fully supported natively.</li>
+                    <li>Session tokens automatically expire and renew every 24 hours.</li>
+                    <li>Offline mode can be enabled via the compiled settings configuration sheet.</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="mt-12 pt-6 border-t border-gray-800 flex justify-between items-center flex-wrap gap-4">
+            <p class="text-sm text-gray-400">Ready to test the build framework?</p>
+            <a id="download-btn" href="#" class="mc-btn px-6 py-3 text-sm uppercase font-bold tracking-wider text-white shadow-md rounded">
+                Download Launcher
             </a>
         </div>
-    </section>
+
+    </main>
 
     <script src="app.js"></script>
 </body>
